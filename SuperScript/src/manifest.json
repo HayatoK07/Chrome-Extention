@@ -1,0 +1,28 @@
+{
+   "author": "takoyaki",
+   "background": {
+      "scripts": [ "background.js", "punycode.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "page_hook.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "default-src 'none'; style-src 'unsafe-inline'; script-src 'self'",
+   "description": "タブにＵＲＬ情報を追加するよ.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "SuperScript",
+   "options_ui": {
+      "chrome_style": true,
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}
